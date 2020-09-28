@@ -1,6 +1,8 @@
 const video = document.getElementById('video');
 const play = document.getElementById('play');
 const stop = document.getElementById('stop');
+const pos15 = document.getElementById('pos15');
+const neg15 = document.getElementById('neg15');
 const progress = document.getElementById('progress');
 const timestamp = document.getElementById('timestamp');
 
@@ -52,6 +54,15 @@ function stopVideo() {
   video.pause();
 }
 
+// +15 sec
+function pos15Video() {
+  video.currentTime +=15;
+}
+
+// -15 sec
+function neg15Video() {
+  video.currentTime -=15;
+}
 // Event listeners
 video.addEventListener('click', toggleVideoStatus);
 video.addEventListener('pause', updatePlayIcon);
@@ -61,5 +72,7 @@ video.addEventListener('timeupdate', updateProgress);
 play.addEventListener('click', toggleVideoStatus);
 
 stop.addEventListener('click', stopVideo);
+pos15.addEventListener('click', pos15Video);
+neg15.addEventListener('click', neg15Video);
 
 progress.addEventListener('change', setVideoProgress);

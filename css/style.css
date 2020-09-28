@@ -59,6 +59,12 @@ h1 {
 
 .controls .fa-pos15 {
     color: orange;
+    font-weight: bold;
+}
+
+.controls .fa-neg15 {
+    color: orange;
+    font-weight: bold;
 }
 
 .controls .timestamp {
